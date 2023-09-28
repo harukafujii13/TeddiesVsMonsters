@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": false
+    },
+    "billing_amount": {
+      "type": "biginteger",
+      "required": true
+    },
+    "order_details": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::orders-detail.orders-detail",
+      "mappedBy": "order"
+    },
+    "trackingId": {
+      "type": "uid",
+      "required": true
+    },
+    "order_date": {
+      "type": "date"
+    }
+  }
+}

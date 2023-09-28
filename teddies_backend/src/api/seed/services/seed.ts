@@ -1,0 +1,5 @@
+/**
+ * seed service
+ */
+
+export default () => ({});

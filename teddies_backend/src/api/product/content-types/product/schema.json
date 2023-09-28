@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "order_details": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::orders-detail.orders-detail",
+      "mappedBy": "product"
+    },
+    "cart_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cart-item.cart-item",
+      "mappedBy": "product"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "invalid",
+        "valid"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "games",
+        "clothe",
+        "accessory"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "maxLength": 300
+    },
+    "no_image": {
+      "type": "boolean"
+    }
+  }
+}

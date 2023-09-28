@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mvps",
+  "info": {
+    "singularName": "mvp",
+    "pluralName": "mvps",
+    "displayName": "MVP"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "rank": {
+      "type": "enumeration",
+      "enum": [
+        "first",
+        "second",
+        "third"
+      ],
+      "required": true
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "time_played": {
+      "type": "integer",
+      "required": true
+    },
+    "favorite": {
+      "type": "string",
+      "required": false
+    },
+    "comment": {
+      "type": "text",
+      "required": true
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "mvps"
+    },
+    "age": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

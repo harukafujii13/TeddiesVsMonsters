@@ -1,0 +1,18 @@
+name: CI
+on: [push]
+jobs:
+  standerd-checks:
+    name: Testing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+
+      - name: Install packages
+        run: npm ci  --force
+      - name: Run tests
+        run: npm run ci:test
+      - name: Bundle and Output
+        run: npm run build
