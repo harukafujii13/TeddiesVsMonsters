@@ -26,12 +26,12 @@ As part of a collaborative team project, we developed a gaming website for a rea
 
 ### Project members
 
-Kota Ito
-Masashi Konno
-Yuki Kasugai
-Hanako Sato
-Jun Tsunokawa
-Haruka Fujii
+- Kota Ito
+- Masashi Konno
+- Yuki Kasugai
+- Hanako Sato
+- Jun Tsunokawa
+- Haruka Fujii
 
 ### Test User
 
